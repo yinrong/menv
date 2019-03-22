@@ -1,0 +1,44 @@
+{
+  "name": "menv",
+  "version": "1.0.0",
+  "description": "Multiple Environment Configuration for Any Language",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "bash test/run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinrong/multi-env.git"
+  },
+  "pkg": {
+    "assets": "lib/*.js"
+  },
+  "keywords": [
+    "multi",
+    "env",
+    "config",
+    "production",
+    "java",
+    "c++",
+    "python",
+    "php",
+    "go"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yinrong/multi-env/issues"
+  },
+  "homepage": "https://github.com/yinrong/multi-env#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "js-yaml": "^3.13.0",
+    "lodash": "^4.17.11",
+    "mkdirp": "^0.5.1",
+    "recursive-readdir": "^2.2.2"
+  },
+  "devDependencies": {
+    "pkg": "^4.3.7"
+  }
+}

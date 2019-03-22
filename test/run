@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+cd `dirname $0`
+node ../index.js build
+echo '[ok] build'
+node ../index.js echo dev1 b.c
+echo '[ok] echo'
+echo 'done.'

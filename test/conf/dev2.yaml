@@ -1,0 +1,6 @@
+__include__:
+  - base.yaml
+  - dev-common.yaml
+
+b:
+  c: dev2

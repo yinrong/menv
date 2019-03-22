@@ -1,0 +1,16 @@
+{
+  "name": "menv-linux",
+  "version": "1.0.3",
+  "bin": "menv",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinrong/multi-env.git"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

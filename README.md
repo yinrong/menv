@@ -1,4 +1,4 @@
-# multi-env
-Multiple Environment Configuration for Any Language
+# menv
+Inheritable Multiple Environment Configuration for Any Language
 
 
