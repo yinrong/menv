@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 let cmd = process.argv[2];
 if (!cmd) {
