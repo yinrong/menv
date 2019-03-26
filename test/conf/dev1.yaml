@@ -4,3 +4,5 @@ __include__:
 
 b:
   c: dev150
+  env: ${__env__}
+  _a: ${a}

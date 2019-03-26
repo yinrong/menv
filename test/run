@@ -24,14 +24,23 @@ function expectThrow() {
 rm -rf build/*
 
 menv build
+echo '[ok] build'
+
 expect dev1 $(menv echo dev1 __env__)
+expect dev150 $(menv echo dev1 b.c)
+expect "a b c" "$(menv echo dev1 b.x)"
+echo '[ok] echo'
+
 expect env-with-dir $(menv echo d1/d2/env-with-dir __env__)
 expect 2 $(menv echo d1/d2/env-with-dir v-x)
 expect 1 $(menv echo d1/d2/env-with-dir v)
-expect dev150 $(menv echo dev1 b.c)
-expect "a b c" "$(menv echo dev1 b.x)"
+echo '[ok] env with dir'
+
 expectThrow menv echo dev1 b.c.no-exist
-echo '[ok] build'
-echo '[ok] echo'
+echo '[ok] config no exist'
+
+expect dev1 $(menv echo dev1 b.env)
+expect 3 $(menv echo dev1 b._a)
+echo '[ok] substitute'
 
 echo '[ok] all success.'
