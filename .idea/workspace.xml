@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75c3db61-9651-465a-ab72-7ca69cb19e2e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/conf/dev1.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/test/conf/dev1.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/run" beforeDir="false" afterPath="$PROJECT_DIR$/test/run" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/pkg" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/pkg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/run">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="480">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -79,7 +75,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test/conf/dev-common.yaml" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/pkg/pkg" />
         <option value="$PROJECT_DIR$/lib/get.js" />
         <option value="$PROJECT_DIR$/lib/echo.js" />
         <option value="$PROJECT_DIR$/index.js" />
@@ -87,6 +82,7 @@
         <option value="$PROJECT_DIR$/test/conf/dev1.yaml" />
         <option value="$PROJECT_DIR$/test/conf/d1/d2/env-with-dir.yaml" />
         <option value="$PROJECT_DIR$/test/run" />
+        <option value="$PROJECT_DIR$/pkg/pkg" />
       </list>
     </option>
   </component>
@@ -121,6 +117,12 @@
               <item name="multi-env" type="b2602c69:ProjectViewProjectNode" />
               <item name="multi-env" type="462c0819:PsiDirectoryNode" />
               <item name="pkg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="multi-env" type="b2602c69:ProjectViewProjectNode" />
+              <item name="multi-env" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="linux" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="multi-env" type="b2602c69:ProjectViewProjectNode" />
@@ -185,16 +187,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553156208163</updated>
-      <workItem from="1553156209910" duration="18978000" />
+      <workItem from="1553156209910" duration="19307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18978000" />
+    <option name="totallyTimeSpent" value="19307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1389" y="568" width="1600" height="1000" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2181357" />
@@ -309,13 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/pkg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/conf/d1/d2">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -361,10 +355,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/pkg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/run">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="480">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>

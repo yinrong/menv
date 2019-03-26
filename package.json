@@ -1,6 +1,6 @@
 {
   "name": "menv",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Multiple Environment Configuration for Any Language",
   "main": "index.js",
   "bin": "index.js",

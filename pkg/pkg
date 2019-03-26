@@ -1,8 +1,7 @@
 #!/bin/bash
 
 cd `dirname $0`/..
-# macos win
-for os in linux; do
+for os in macos win linux; do
     node_modules/.bin/pkg . -t $os -o pkg/$os/menv-$os
 done
 

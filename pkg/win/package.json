@@ -1,5 +1,5 @@
 {
-  "name": "menv-linux",
+  "name": "menv-win",
   "version": "1.0.4",
   "bin": "menv",
   "repository": {
