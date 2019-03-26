@@ -1,0 +1,35 @@
+#!/bin/bash
+
+ver=1.0.7
+
+set -e
+
+# get os
+uname_out="$(uname -s)"
+case "${uname_out}" in
+    Linux*)     os=linux;;
+    Darwin*)    os=macos;;
+    CYGWIN*)    os=win;;
+    MINGW*)     os=win;;
+    *)          os="unsupported:${uname_out}"
+esac
+
+oldwd=`pwd`
+bindir=`dirname $0`
+
+# install
+cd $bindir
+if [ ! -f menv-version ] || ! cat menv-version|grep -x $ver &>/dev/null; then
+    echo -n "fisrt time using menv, install ..."
+    curl -s https://registry.npmjs.org/menv-$os/-/menv-$os-$ver.tgz |tar zx package/menv-$os --strip-components=1
+    chmod a+x menv-$os
+    echo $ver > menv-version
+    if ! grep -x 'menv-*' .gitignore &>/dev/null; then
+        echo 'menv-*' >> .gitignore
+    fi
+    echo "done"
+fi
+cd $oldwd
+
+# run real "menv"
+$bindir/menv-$os "$@"
