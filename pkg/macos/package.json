@@ -1,6 +1,6 @@
 {
   "name": "menv-maxos",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "bin": "menv-macos",
   "repository": {
     "type": "git",
