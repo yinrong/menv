@@ -6,3 +6,8 @@ b:
   c: dev150
   env: ${__env__}
   _a: ${a}
+
+# Array will be replaced !
+redis:
+  - host: 5.5.5.5
+    port: 6000

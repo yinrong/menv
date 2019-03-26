@@ -43,4 +43,8 @@ expect dev1 $(menv echo dev1 b.env)
 expect 3 $(menv echo dev1 b._a)
 echo '[ok] substitute'
 
+expect 5.5.5.5 $(menv echo dev1 redis[0].host)
+expect "" "$(menv echo dev1 redis[1].host)"
+echo '[ok] array value'
+
 echo '[ok] all success.'
