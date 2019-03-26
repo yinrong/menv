@@ -1,6 +1,6 @@
 {
   "name": "menv-win",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "bin": "menv-win",
   "repository": {
     "type": "git",
