@@ -2,8 +2,35 @@
 
 set -e
 cd `dirname $0`
-node ../index.js build
+
+function menv() {
+    node ../index.js "$@"
+}
+
+function expect() {
+    if [[ "$1" != "$2" ]]; then
+        echo "[fail] expect=$1, actual=$2"
+        exit 1
+    fi
+}
+function expectThrow() {
+    if "$@"; then
+        echo "expect throw, but not happen. cmd=$@"
+        exit 1
+    fi
+}
+
+# clean
+rm -rf build/*
+
+menv build
+expect dev1 $(menv echo dev1 __env__)
+expect env-with-dir $(menv echo d1/d2/env-with-dir __env__)
+expect 2 $(menv echo d1/d2/env-with-dir v-x)
+expect 1 $(menv echo d1/d2/env-with-dir v)
+expect dev150 $(menv echo dev1 b.c)
+expectThrow menv echo dev1 b.c.no-exist
 echo '[ok] build'
-node ../index.js echo dev1 b.c
 echo '[ok] echo'
-echo 'done.'
+
+echo '[ok] all success.'

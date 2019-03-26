@@ -7,4 +7,8 @@ if (!cmd) {
     process.exit(1);
 }
 
+process.on('unhandledRejection', err => {
+    console.error(err);
+    process.exit(1);
+});
 require(`${__dirname}/lib/${cmd}`).run(process.argv.slice(3));
