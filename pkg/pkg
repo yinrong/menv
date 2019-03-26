@@ -2,6 +2,6 @@
 
 cd `dirname $0`/..
 for os in macos win linux; do
-    node_modules/.bin/pkg . -t $os -o pkg/$os/menv-$os
+    node_modules/.bin/pkg . -t $os -o pkg/$os/menv
 done
 

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pkg/pkg
+
+find . -name package.json ! -path '*/node_modules/*'| while read p; do 
+    d=`dirname $p`
+    cd $d
+    npm pu
+    cd -
+done

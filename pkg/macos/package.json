@@ -1,7 +1,7 @@
 {
   "name": "menv-maxos",
-  "version": "1.0.4",
-  "bin": "menv",
+  "version": "1.0.6",
+  "bin": "menv-macos",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yinrong/multi-env.git"
