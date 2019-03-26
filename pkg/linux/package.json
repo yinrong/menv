@@ -1,6 +1,6 @@
 {
   "name": "menv-linux",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "bin": "menv-linux",
   "repository": {
     "type": "git",

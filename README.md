@@ -9,7 +9,7 @@ Inheritable Multiple Environment Configuration for Any Language
 
 ### 1.1. Install / Upgrade
 ```bash
-curl -s https://registry.npmjs.org/menv-wrapper/-/menv-wrapper-1.0.8.tgz |tar zx package/menv --strip-components=1
+curl -s https://registry.npmjs.org/menv-wrapper/-/menv-wrapper-1.0.9.tgz |tar zx package/menv --strip-components=1
 ./menv
 git add -f menv .gitignore
 git commit -m 'add menv'
