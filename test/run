@@ -29,6 +29,7 @@ expect env-with-dir $(menv echo d1/d2/env-with-dir __env__)
 expect 2 $(menv echo d1/d2/env-with-dir v-x)
 expect 1 $(menv echo d1/d2/env-with-dir v)
 expect dev150 $(menv echo dev1 b.c)
+expect "a b c" "$(menv echo dev1 b.x)"
 expectThrow menv echo dev1 b.c.no-exist
 echo '[ok] build'
 echo '[ok] echo'
