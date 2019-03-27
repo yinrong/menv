@@ -1,7 +1,7 @@
 # menv
 Inheritable Multiple Environment Configuration for Any Language
 
-![Demo: menv build](https://github.com/yinrong/menv/raw/master/demo.png "menv build")
+![Demo: menv build](https://github.com/yinrong/menv/raw/master/demo1.png "menv build")
 
 # Usage
 
