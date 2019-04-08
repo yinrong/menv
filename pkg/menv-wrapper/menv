@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if which menv &>/dev/null; then
+    menv "$@"
+    exit
+fi
+
 ver=1.2.2
 
 set -e
@@ -20,14 +25,14 @@ bindir=`dirname $0`
 # install
 cd $bindir
 if [ ! -f menv-version ] || ! cat menv-version|grep -x $ver &>/dev/null; then
-    echo -n "fisrt time using menv, install ..."
+    echo -n "fisrt time using menv, install ..." >&2
     curl -s https://registry.npmjs.org/menv-$os/-/menv-$os-$ver.tgz |tar --strip-components=1 -zx package/menv-$os
     chmod a+x menv-$os
     echo $ver > menv-version
     if ! grep -x 'menv-\*' .gitignore &>/dev/null; then
         echo 'menv-*' >> .gitignore
     fi
-    echo "done"
+    echo "done" >&2
 fi
 cd $oldwd
 

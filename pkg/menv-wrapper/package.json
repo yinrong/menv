@@ -1,6 +1,6 @@
 {
   "name": "menv-wrapper",
-  "version": "1.2.2",
+  "version": "1.2.5",
   "bin": "menv",
   "repository": {
     "type": "git",
