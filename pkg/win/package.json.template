@@ -1,7 +1,7 @@
 {
-  "name": "menv-linux",
-  "version": "1.2.2",
-  "bin": "menv-linux",
+  "name": "menv-win",
+  "version": "%VERSION%",
+  "bin": "menv-win",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yinrong/multi-env.git"

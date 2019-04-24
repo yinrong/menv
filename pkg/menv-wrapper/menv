@@ -1,40 +1,39 @@
 #!/bin/bash
 
-if which menv &>/dev/null; then
-    menv "$@"
-    exit
-fi
+ver=1.3.0
+bindir=$HOME/.sw/menv/bin
+export PATH=$bindir:$PATH
 
-ver=1.2.2
+menv_ver=`menv ver 2>/dev/null`
+if [[ $menv_ver != $ver ]]; then
+    set -e
 
-set -e
+    # get os
+    uname_out="$(uname -s)"
+    case "${uname_out}" in
+        Linux*)     os=linux;;
+        Darwin*)    os=macos;;
+        CYGWIN*)    os=win;;
+        MINGW*)     os=win;;
+        *)          os="unsupported:${uname_out}"
+    esac
 
-# get os
-uname_out="$(uname -s)"
-case "${uname_out}" in
-    Linux*)     os=linux;;
-    Darwin*)    os=macos;;
-    CYGWIN*)    os=win;;
-    MINGW*)     os=win;;
-    *)          os="unsupported:${uname_out}"
-esac
-
-oldwd=`pwd`
-bindir=`dirname $0`
-
-# install
-cd $bindir
-if [ ! -f menv-version ] || ! cat menv-version|grep -x $ver &>/dev/null; then
-    echo -n "fisrt time using menv, install ..." >&2
+    # install
+    oldwd=`pwd`
+    mkdir -p $bindir
+    cd $bindir
+    echo -n "install menv..." >&2
+    rm -f menv-$os
     curl -s https://registry.npmjs.org/menv-$os/-/menv-$os-$ver.tgz |tar --strip-components=1 -zx package/menv-$os
-    chmod a+x menv-$os
-    echo $ver > menv-version
-    if ! grep -x 'menv-\*' .gitignore &>/dev/null; then
-        echo 'menv-*' >> .gitignore
-    fi
+    rm -f menv
+    mv menv-$os menv
+    chmod a+x menv
+    rm -f *.tgz
     echo "done" >&2
+    cd $oldwd
 fi
-cd $oldwd
+
+
 
 # run real "menv"
-$bindir/menv-$os "$@"
+menv "$@"

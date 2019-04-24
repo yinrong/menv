@@ -1,7 +1,29 @@
 #!/bin/bash
 
-cd `dirname $0`/..
+set -e
+
+root=`cd $(dirname $0)/..; pwd`
+cd $root
+ver=`node -p "require('./package').version"`
+echo "ver=$ver" >&2
+
+build() {
+    menv_info="$(npm info menv-$1@$ver 2>/dev/null)"
+    if [[ -n $menv_info ]]; then
+        echo "menv-$1@ver already exists, skip it." >&2
+        return 0
+    fi
+    if [[ $2 == pkg ]]; then
+        cd $root
+        node_modules/.bin/pkg . -t $1 -o pkg/$os/menv-$1
+    fi
+    cd $root/pkg/$1
+    sed -e "s/%VERSION%/$ver/" package.json.template > package.json
+    npm pu
+}
+
 for os in macos win linux; do
-    node_modules/.bin/pkg . -t $os -o pkg/$os/menv-$os
+    build $os pkg
 done
 
+build wrapper
